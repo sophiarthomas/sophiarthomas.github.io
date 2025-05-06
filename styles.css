@@ -1,0 +1,61 @@
+
+:root {
+    --camogreen: #7A9663;
+    --powderblue: #B0E0E6;
+    --errieblack: #15191E;
+    --laurelgreen: #A0AE91;
+    --rhythm: #7660A7; 
+    --darkvanilla: #FFF3E1;
+}
+
+body {
+    background-color: #15191E
+}
+h1 {
+    color: var(--rhythm); 
+    text-align: center;
+    font-family:'verdana', sans-serif;
+}
+h2 {
+    color: var(--powderblue);
+}
+p {
+    color: var(--powderblue);
+    font-size: 15px;
+    font-family: 'verdana', sans-serif;
+    padding: 10px;
+    margin: 20px; 
+}
+b {
+    color: var(--cream);
+    font-family: 'verdana', sans-serif;
+    text-align: center;
+}
+a {
+    color: var(--rhythm);   
+}
+button {
+    border: 1px solid var(--rhythm); 
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--rhythm); 
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer; 
+}
+img {
+    padding: 10px;
+    border-radius: 30px; ;
+}
+mark {
+    background-color: var(--powderblue);
+    color: var(--errieblack);
+    font-weight: bold;
+}
+div {
+    background-color: black;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
