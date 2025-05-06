@@ -9,7 +9,12 @@
 }
 
 body {
-    background-color: #15191E
+    background-color: #15191E;
+    height: 90vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }
 h1 {
     color: var(--rhythm); 
@@ -32,7 +37,10 @@ b {
     text-align: center;
 }
 a {
-    color: var(--rhythm);   
+    color: var(--rhythm);  
+    font-size: 20px;
+    border: 1px solid var(--rhythm);
+    /* border-radius: 30px;  */
 }
 button {
     border: 1px solid var(--rhythm); 
@@ -48,14 +56,45 @@ img {
     border-radius: 30px; ;
 }
 mark {
-    background-color: var(--powderblue);
-    color: var(--errieblack);
+    background-color: transparent;
+    color: var(--darkvanilla);
     font-weight: bold;
 }
 div {
-    background-color: black;
+    background-color: var(--errieblack);
     border-radius: 30px;
     padding: 10px;
     margin: 10px;
     text-align: center;
+}
+.topnav {
+    overflow: hidden; 
+    background-color: var(--errieblack);
+    display: flex-center;
+}
+.topnav a, button {
+    float: center; 
+    color: var(--darkvanilla); 
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.topnav a, button:hover {
+    background-color: var(--darkvanilla);
+    color: black;
+}
+.sidebar {
+    background-color: var(--errieblack);
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+.sidebar a {
+    color: var(--darkvanilla);
+    padding: 14px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: var(--darkvanilla);
+    color: black;
 }
