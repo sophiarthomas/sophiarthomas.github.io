@@ -39,7 +39,7 @@ b {
 a {
     color: var(--rhythm);  
     font-size: 20px;
-    border: 1px solid var(--rhythm);
+    /* border: 1px solid var(--rhythm); */
     /* border-radius: 30px;  */
 }
 button {
@@ -97,4 +97,11 @@ div {
 .sidebar a:hover {
     background-color: var(--darkvanilla);
     color: black;
+}
+.projects a{
+    background-color: var(--errieblack);
+    padding: 10px;
+    margin: 10px;
+    color: var(--darkvanilla);
+    text-decoration: none; 
 }

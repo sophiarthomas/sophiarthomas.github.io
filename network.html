@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>Network Engineering</title>
+  <meta charset="utf-8">
+  <title>Network Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 <body>
+  <div>
+    <h1>Network Engineering</h1>
     <div>
-        <h1>Network Engineering</h1>
-        <div>
-            <h2>EXPLORE Friendship Graph</h2>
-            <img src="" style="width:400px;height:300px;" title="Network Diagram">
-            
-        </div>
-        <div>
-            <h2>Certifications</h2>
-            <!-- Badges -->
-        </div>
+      <h2>EXPLORE Friendship Graph</h2>
 
-        <p>
-            <button onclick="document.location='index.html'">Go Back to Home</button>
-        </p>
-    </div>   
+      <!-- Container for the graph -->
+      <div id="my_dataviz"></div>
+    </div>
+
+    <!-- <div>
+      <h2>Certifications</h2>
+    </div> -->
+
+    <p>
+      <button onclick="document.location='index.html'">Go Back to Home</button>
+    </p>
+  </div>
+
+  <!-- D3 Script at the bottom -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var svg = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", 400)
+        .attr("height", 400);
+
+      svg.append("circle")
+        .attr("id", "circleBasicTooltip")
+        .attr("cx", 150)
+        .attr("cy", 200)
+        .attr("r", 40)
+        .attr("fill", "#69b3a2");
+
+      var tooltip = d3.select("body")
+        .append("div")
+        .style("position", "absolute")
+        .style("visibility", "hidden")
+        .style("background", "#fff")
+        .style("border", "1px solid #ccc")
+        .style("padding", "5px")
+        .style("border-radius", "4px")
+        .text("Explore Circle!");
+
+      d3.select("#circleBasicTooltip")
+        .on("mouseover", function () {
+          tooltip.style("visibility", "visible");
+        })
+        .on("mousemove", function () {
+          tooltip
+            .style("top", (event.pageY + 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function () {
+          tooltip.style("visibility", "hidden");
+        });
+    });
+  </script>
 </body>
 </html>
-            
