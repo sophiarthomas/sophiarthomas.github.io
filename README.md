@@ -9,6 +9,7 @@
 
 - Frontend: React (Vite or CRA) with React Router
 - Backend: Node.js + Express REST API
+  - **ES Modules (async)** vs CommonJS (sync)
 - Database: MongoDB + Mongoose ODM
 
 ### API Endpoints
