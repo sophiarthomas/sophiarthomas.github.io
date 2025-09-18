@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import nodemon from "nodemon"; 
 import dotenv from "dotenv";
 import userRouter from './routes/user.js';
+import experienceRouter from './routes/experience.js'
 // import User from "./model/user.model.js";
 
 
@@ -27,12 +28,6 @@ if (!mongoUri) {
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.error("MongoDB connection error:", err));
 
-
-
-app.get('/api/users', (req, res) => {
-  console.log(req.body)
-  res.send(req.body)
-})
 // await user.save();  // will create duplicates 
 // const firstUser = await User.find({});
 // console.log(firstUser)
@@ -41,15 +36,13 @@ app.get('/api/users', (req, res) => {
  */
 
 const Routes = (app) => {
-  // Root URL
+// Root URL
 app.get("/", (req, res) => {
-  res.send({ 
-    message: "Hello from backend!",
-    message2:"Howdy ya'll my name is Sophia Thomas and I am a recent computer science graduate looking to a find SWE infrastrucutre role. Ever since hight school I have been interested in the rapid growth of tech and I decided I wanted to be apart of the development!  "
-  }).status(200);
+  res.send('Nothing to see on this page').status(200);
 });
 
-app.use('/user', userRouter)
+app.use('/api/user', userRouter)
+app.use('/api/experience', experienceRouter)
 }
 Routes(app)
 

@@ -1,12 +1,13 @@
-import {userController} from './controllers/UserController.js'
+import { getAllUsers } from './controllers/UserController.js'
 import User from '../model/user.model.js'
 import express from "express";
 
 const router = express.Router()
 
-router.get('/', userController)
+// Get all Users 
+router.get('/', getAllUsers)
 
-// Adding a new user 
+// Add a new user 
 router.post('/', async (req, res) => {
   try {
     const user = await User.create(req.body); 
@@ -16,19 +17,20 @@ router.post('/', async (req, res) => {
   }
 })
 
+// Get new users
 router.get('/new', (req, res) => {
   res.send("User New Form")
 })
 
-router.route('/:name').get((req, res) => {
-    req.params.name
-    res.send(`Get User with ID ${req.params.name}`)
-}).put((req, res) => {
-    req.params.name
-    res.send(`Put User with ID ${req.params.name}`)
-}).delete((req, res) => {
-    res.send(`Delete ${res.params.name}`)
-})
+// router.route('/:name').get((req, res) => {
+//     req.params.name
+//     res.send(`Get User with ID ${req.params.body}`)
+// }).put((req, res) => {
+//     req.params.name
+//     res.send(`Put User with ID ${req.params.name}`)
+// }).delete((req, res) => {
+//     res.send(`Delete ${res.params.name}`)
+// })
 
 // // Dynamic parameter /:{}
 // router.get((req, res) => {
