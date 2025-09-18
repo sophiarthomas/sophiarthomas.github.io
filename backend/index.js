@@ -5,19 +5,17 @@ import nodemon from "nodemon";
 import dotenv from "dotenv";
 import userRouter from './routes/user.js';
 import experienceRouter from './routes/experience.js'
-// import User from "./model/user.model.js";
-
-
 
 dotenv.config()
-
 const app = express();
+
+// middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
+app.use(cors()); 
+// app.use(logger);
 
 const PORT = process.env.PORT || 3000;
-
-// Middleware to allow cross-origin requests 
-app.use(cors()); 
 
 // Connect to MongoDB
 const mongoUri = process.env.MONGODB_URI; 
@@ -28,23 +26,24 @@ if (!mongoUri) {
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.error("MongoDB connection error:", err));
 
-// await user.save();  // will create duplicates 
-// const firstUser = await User.find({});
-// console.log(firstUser)
 /**
  * Sub-routers for our main router, we should have one sub-router per "entity" in the application
  */
-
 const Routes = (app) => {
-// Root URL
-app.get("/", (req, res) => {
-  res.send('Nothing to see on this page').status(200);
-});
+  // Root URL
+  app.get("/", (req, res) => {
+    res.send({message: 'Nothing to see on this page'}).status(200);
+  });
 
-app.use('/api/user', userRouter)
-app.use('/api/experience', experienceRouter)
+  app.use('/api/user', logger, userRouter)
+  app.use('/api/experience', experienceRouter)
 }
 Routes(app)
+
+function logger(req, res, next) {
+  console.log(req.originalUrl)
+  next()
+}
 
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
