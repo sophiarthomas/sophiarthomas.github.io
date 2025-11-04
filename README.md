@@ -1,4 +1,5 @@
 # SophNet
+Practicing Fullstack Development using the MERN stack
 
 ## How to Start Server
 
