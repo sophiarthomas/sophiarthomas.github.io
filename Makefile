@@ -1,3 +1,6 @@
+MD_FILES=$(wildcard src/*.md)
+HTML_FILES=$(patsubst src/%.md,dst/%.html,$(MD_FILES))
+
 gen: $(HTML_FILES)
 	@mkdir -p public 
 	cp -r assets dst/
