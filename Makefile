@@ -20,6 +20,7 @@ gen: $(HTML_FILES)
 		-L 1 \
 		-T 'sophiarthomas' \
 		-o dst/listall.html \
+		-o dst/*.md
 		dst
 
 clean: 
