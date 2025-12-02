@@ -15,7 +15,7 @@ gen: $(HTML_FILES)
 	@mkdir -p dst
 	cp -r src/* dst/
 	tree \
-		-H https://sophiarthomas.github.io/dst \
+		-H https://sophiarthomas.github.io/ \
 		--dirsfirst \
 		-L 1 \
 		-T 'sophiarthomas' \
