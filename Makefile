@@ -20,7 +20,7 @@ gen: $(HTML_FILES)
 		-T 'sophiarthomas' \
 		-I 'assets/|img/' \
 		-o dst/listall.html \
-		/dst
+		./dst
 
 clean: 
 	rm -rf dst
