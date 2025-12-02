@@ -14,13 +14,13 @@ dst/%.html: src/%.md
 gen: $(HTML_FILES)
 	@mkdir -p dst
 	cp -r src/* dst/
-	cd dst && tree \
-		-H https://sophiarthomas.github.io/ \
+	tree \
+		-H https://sophiarthomas.github.io/dst \
 		--dirsfirst \
 		-L 1 \
 		-T 'sophiarthomas' \
-		-o listall.html \
-		./
+		-o dst/listall.html \
+		dst
 
 clean: 
 	rm -rf dst
