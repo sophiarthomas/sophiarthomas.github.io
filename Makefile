@@ -14,7 +14,7 @@ dst/%.html: src/%.md
 gen: $(HTML_FILES)
 	@mkdir -p dst
 	cp -r assets/* dst/
-	tree -H https://sophiarthomas.github.io/sophiarthomas.com \
+	tree -H https://sophiarthomas.github.io/ \
 		--dirsfirst \
 		-L 1 \
 		-T 'sophiarthomas' \
