@@ -17,11 +17,13 @@ dst/%.html: src/%.md
 		
 gen: $(HTML_FILES)
 	@mkdir -p dst
+	cp -r assets/css dst/
 	cp -r src/*.html dst/
 	tree \
 		-H https://sophiarthomas.github.io/ \
 		--dirsfirst \
 		-L 1 \
+		-I 'assets/|css/' \
 		-T 'sophiarthomas' \
 		-o dst/listall.html \
 		dst
