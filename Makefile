@@ -1,6 +1,10 @@
 MD_FILES=$(wildcard src/*.md)
 HTML_FILES=$(patsubst src/%.md,dst/%.html,$(MD_FILES))
 
+# targets: dependencies (file names)
+# 	command
+#	command
+
 dst/%.html: src/%.md
 	@mkdir -p dst
 	pandoc \
@@ -13,14 +17,13 @@ dst/%.html: src/%.md
 		
 gen: $(HTML_FILES)
 	@mkdir -p dst
-	cp -r src/* dst/
+# 	cp -r src/* dst/
 	tree \
 		-H https://sophiarthomas.github.io/ \
 		--dirsfirst \
 		-L 1 \
 		-T 'sophiarthomas' \
 		-o dst/listall.html \
-		-o dst/*.md
 		dst
 
 clean: 
