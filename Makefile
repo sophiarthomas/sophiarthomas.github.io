@@ -10,14 +10,15 @@ dst/%.html: src/%.md
 	pandoc \
 		--standalone \
 		--katex \
-		--css=assets/pandoc.css \
+		--css=assets/css/style.css \
 		--from gfm$(MD_EXTENSIONS) \
 		--metadata pagetitle=$< \
 		$< -o $@
 		
 gen: $(HTML_FILES)
 	@mkdir -p dst
-	cp -r assets/css dst/
+	cp -r assets dst/
+	cp -r scripts dst/
 	cp -r src/*.html dst/
 	tree \
 		-H https://sophiarthomas.github.io/ \
