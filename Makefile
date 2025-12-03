@@ -23,7 +23,6 @@ gen: $(HTML_FILES)
 		-H https://sophiarthomas.github.io/ \
 		--dirsfirst \
 		-L 1 \
-		-I 'assets/|css/' \
 		-T 'sophiarthomas' \
 		-o dst/listall.html \
 		dst
