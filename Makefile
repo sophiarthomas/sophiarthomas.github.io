@@ -17,7 +17,7 @@ dst/%.html: src/%.md
 		
 gen: $(HTML_FILES)
 	@mkdir -p dst
-# 	cp -r src/* dst/
+	cp -r src/*.html dst/
 	tree \
 		-H https://sophiarthomas.github.io/ \
 		--dirsfirst \
