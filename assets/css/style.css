@@ -104,11 +104,12 @@
     position: absolute; 
     }
     .folder {
-      position: relative; 
-      width: 50px; 
-      height: 50px; 
+      position: absolute; 
+      left: 30px;
+      width: 100px; 
+      height: 100px; 
     }
     .folder-img {
-      width: 100%;
-      height: 100%; 
+      width: 75%;
+      height: 75%; 
     }
