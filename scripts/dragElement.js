@@ -23,4 +23,4 @@ function makeDraggable(el) {
 }
 
 // Select all draggable elements — doesn’t matter which class
-document.querySelectorAll(".tile, .window").forEach(makeDraggable);
+document.querySelectorAll(".tile, .window, .folder").forEach(makeDraggable);
