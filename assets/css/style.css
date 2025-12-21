@@ -100,9 +100,18 @@
     border: 1px solid rgba(255,255,255,0.04);
     overflow:hidden;
     background:black;
-    cursor: grab;
-				position: absolute;
+    cursor: auto;
+		position: absolute;
+    align-self: flex-end;
     }
+    .window.minimized .content,
+    .window.minimized .footer {
+      display: none;
+    }
+
+    .window.minimized {
+      height: auto;
+}
     .folder {
       position: absolute; 
       top: 50px; 
