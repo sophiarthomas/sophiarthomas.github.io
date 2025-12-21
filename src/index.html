@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sophia R. Thomas</title>
   <style>
      body{
-      background:url('./assets/img/logos/kali-layers.png');
+      background:url('../assets/img/logos/kali-layers.png');
       background-size:cover;
       background-position: center center; 
       background-attachment: fixed; 
@@ -24,18 +24,25 @@
    <a target="_blank" href="./listall.html">Go to Directory</a>
    </div>
   <div class="folder">
-    <img class="folder-img" src="/assets/img/logos/kali_folder.svg">
+    <img class="folder-img" src="../assets/img/logos/kali_folder.svg">
   </div>
-  <script src="./scripts/dragElement.js" defer></script>
+  <script src="../scripts/test.js"></script>
+  <script src="../scripts/closeWindow.js"></script>
+  <script src="../scripts/dragElement.js" defer></script>
    <div class="window" role="dialog" aria-label="Contact card — Sophia">
-    <div class="titlebar">
+    <!-- <div class="titlebar">
       <div class="dots">
         <div class="dot red" aria-hidden="true"></div>
-        <div class="dot yellow" aria-hidden="true"></div>
+        <div class="dot yellow" aria-hidden="true" onclick="toggleMinimize(this)"></div>
         <div class="dot green" aria-hidden="true"></div>
       </div>
       <div class="title">Website Under Contruction</div>
-    </div>
+    </div> -->
+    <nav class="window-controls">
+      <div class="maximize">mail</div>
+      <div class="close"></div>
+      <div class="minimize"></div>
+	  </nav>
 
     <div class="content">
       <h1>Hello I am Sophia - IT Support Specialist</h1>
@@ -44,7 +51,7 @@
 
       <div class="card" aria-hidden="false">
         <div class="avatar">
-	  <img class="avatar" src="/assets/img/icons/github.jpg" alt="image">
+	  <img class="avatar" src="../assets/img/icons/github.jpg" alt="image">
 	</div>
         <div class="info">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
