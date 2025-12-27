@@ -1,1 +1,0 @@
-/Users/sophiathomas/Documents/Obsidian/sophia-career-vault/sophia-career-vault/00 - Welcome.md
