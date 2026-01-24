@@ -10,7 +10,7 @@ dst/%.html: src/%.md
 	pandoc \
 		--standalone \
 		--katex \
-		--css=assets/pandoc.css \
+		--css=assets/css/pandoc.css \
 		--from gfm$(MD_EXTENSIONS) \
 		--metadata pagetitle=$< \
 		$< -o $@
