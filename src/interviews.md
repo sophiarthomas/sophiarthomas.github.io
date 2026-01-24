@@ -1,4 +1,5 @@
-<h1 align="center"> Professional notebooks </h1>
+# Professional notebooks
+
 <p align="center">Sophia's attempt at documenting progress</p>
 
 [Github](#github) | [React](#react)

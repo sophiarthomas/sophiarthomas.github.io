@@ -1,12 +1,16 @@
+root {
+  --primary-color: #1e90ff; 
+  --text-color: black; 
+  --main-padding: 15px;    
+  --font-family: Serif; 
+}
 body {
     margin: auto;
     padding-right: 1em;
     padding-left: 1em;
     max-width: 44em; 
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    color: black;
-    font-family: Verdana, sans-serif;
+    color: var(--text-color);
+    font-family: var(--font-family);
     font-size: 100%;
     line-height: 140%;
     color: #333; 
@@ -22,14 +26,15 @@ code {
 }
 h1 a, h2 a, h3 a, h4 a, h5 a { 
     text-decoration: none;
-    color: #7a5ada; 
+    color: black 
 }
-h1, h2, h3, h4, h5 { font-family: verdana;
+h1, h2, h3, h4, h5 { font-family: var(--font-family);
                      font-weight: bold;
                      border-bottom: 1px dotted black;
-                     color: #7a5ada; }
+                     color: Black; }
 h1 {
         font-size: 130%;
+        text-align: center; 
 }
 
 h2 {
@@ -55,7 +60,7 @@ h1.title {
         font-weight: bold;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
-        text-align: left;
+        text-align: center;
         border: none;
 }
 
