@@ -10,7 +10,7 @@ dst/%.html: src/%.md
 	pandoc \
 		--standalone \
 		--katex \
-		--css=assets/css/pandoc.css \
+		--css=assets/css/splendor.css \
 		--from gfm$(MD_EXTENSIONS) \
 		--metadata pagetitle=$< \
 		$< -o $@
@@ -33,6 +33,9 @@ clean:
 	rm -rf dst
 
 push: clean
-	git add --all
+# 	git add --all
 	git commit -m "Makefile deploy at $$(date)" || true
 	git push 
+
+css: 
+	pandoc src/interviews.md -o main.html -s -c assets/css/splendor.css
