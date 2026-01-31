@@ -24,4 +24,4 @@ function toggleFullScreen(dot) {
     const windowEl = dot.closest('.window'); 
     windowEl.classList.toggle('maxmimized')
 }
-docuement.querySelectorAll('.dot.green').forEach(toggleFullScreen); 
+// docuement.querySelectorAll('.dot.green').forEach(toggleFullScreen); 

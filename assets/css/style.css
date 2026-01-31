@@ -1,5 +1,7 @@
 :root{
-      --bg:#0f1724;
+      --bg: #2b303b;
+      --bg_darker: #1b1f27
+      --text: #88c0d0;;
       --panel:#0b1220;
       --accent:#16a34a;
       --muted:#94a3b8;
@@ -10,7 +12,7 @@
     footer {
       text-align: center;
       padding: 3px;
-      background-color: Black;
+      background-color: var(--bg-darker);
       color: white;
    }
    
@@ -22,8 +24,25 @@
       align-items:center;
       gap:12px;
       padding:14px 16px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+      background: var(--bg);
       border-bottom:1px solid rgba(255,255,255,0.02);
+    }
+    .titlebar-kali {
+      background: #2b303b;
+      padding: 8px 12px;
+      cursor: move;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #88c0d0;
+      font-size: 14px;
+    }
+    .titlebar-kali button {
+      background: none;
+      border: none;
+      color: #ff6b6b;
+      font-size: 14px;
+      cursor: pointer;
     }
     .dots{display:flex;gap:8px}
     .dot{width:12px;height:12px;border-radius:50%; cursor:auto}
@@ -84,7 +103,7 @@
     .tile {
     width: 150px;
     height: 150px;
-    background: #2e7dd7;
+    background: paleturquoise;
     color: white;
     display: flex;
     align-items: center;
@@ -101,7 +120,7 @@
     box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.04);
     overflow:hidden;
-    background:black;
+    background:#1b1f27;
     cursor: auto;
 		position: absolute;
     align-self: flex-end;
@@ -113,7 +132,20 @@
 
     .window.minimized {
       height: auto;
-}
+    }
+    .window-kali {
+      position: absolute;
+    top: 120px;
+    left: 150px;
+    width: 520px;
+    background: #1b1f27;
+    border: 2px solid #2e3440;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0,0,0,.8);
+  }
+    .hidden {
+        display: none; 
+    }
     .folder {
       position: fixed; 
       top: 50px; 
@@ -126,4 +158,18 @@
       width: 100%;
       height: 100%; 
       pointer-events: none;
+      user-select: none; 
+    }
+    .folder span {
+      display: block; 
+      margin-top: 6px; 
+    }
+    .file {
+      padding: 6px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .file:hover {
+      background: #2e3440;
     }
