@@ -135,19 +135,19 @@
     }
     .window-kali {
       position: absolute;
-    top: 120px;
-    left: 150px;
-    width: 520px;
-    background: #1b1f27;
-    border: 2px solid #2e3440;
-    border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0,0,0,.8);
-  }
+      top: 120px;
+      left: 150px;
+      width: 520px;
+      background: #1b1f27;
+      border: 2px solid #2e3440;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(0,0,0,.8);
+    }
     .hidden {
         display: none; 
     }
     .folder {
-      position: fixed; 
+      /* position: fixed;  */
       top: 50px; 
       right: 30px;
       width: 100px; 
@@ -156,8 +156,11 @@
     }
     .folder:hover {
     transform: scale(1.07);
-  }
-    .folder-img {
+    }
+    .folder:active {
+      transform: scale(0.95); 
+    }
+    .folder img {
       width: 100%;
       height: 100%; 
       pointer-events: none;
@@ -166,6 +169,7 @@
     .folder span {
       display: block; 
       margin-top: 6px; 
+      font-size: 12px; 
     }
     .file {
       padding: 6px;
@@ -180,4 +184,15 @@
     width: 20px;
     height: 20px;
     object-fit: contain;
+  }
+  .desktop {
+    display: grid; 
+    grid-template-columns: auto auto auto; 
+    gap: 30px;
+    padding: 40px; 
+  }
+  .desktop div {
+    padding: 10px;
+    text-align: center;
+    
   }

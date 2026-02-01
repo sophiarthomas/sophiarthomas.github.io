@@ -27,4 +27,10 @@ function openWindow() {
 function closeWindow() {
      windowEl.classList.add("hidden"); 
 }
+
+function openProject() {
+     
+
+}
+
 folder.addEventListener("dblclick", openWindow);
