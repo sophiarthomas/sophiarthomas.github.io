@@ -2,9 +2,12 @@
 
 ## Status
 
-- Add icons for project, about me, etc
-- Initialize the blocks in certain locations on the screen
-- make the red button close the window
+- [x] Add icons for project, about me, etc
+- [x] Initialize the blocks in certain locations on the screen
+- [ ] make the red button close the window
+- [ ] closeWindow() function
+- [ ] create a window for each folder
+-
 
 ## Makefile
 
