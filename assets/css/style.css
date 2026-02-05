@@ -37,10 +37,10 @@
       color: #88c0d0;
       font-size: 14px;
     }
-    .titlebar-kali button {
+    .window-close {
       background: none;
       border: none;
-      color: #ff6b6b;
+      color: #6bc6ff;
       font-size: 14px;
       cursor: pointer;
     }
@@ -135,16 +135,19 @@
     }
     .window-kali {
       position: absolute;
-      top: 120px;
-      left: 150px;
+      align-self: center; 
+      /* top: 120px;
+      left: 150px; */
       width: 520px;
       background: #1b1f27;
       border: 2px solid #2e3440;
       border-radius: 8px;
       box-shadow: 0 0 25px rgba(0,0,0,.8);
+      transition: opacity 0.15s ease; 
     }
     .hidden {
-        display: none; 
+        opacity: 0; 
+        pointer-events: none; 
     }
     .folder {
       /* position: fixed;  */

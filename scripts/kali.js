@@ -1,32 +1,49 @@
-const folder = document.querySelector(".folder");
-const cloud = '../assets/img/icons/cloud.png'
+const cloud = '../assets/img/icons/cloud.png';
 let z = 10; 
 
-/* projects */
 const projects = [
      { name: "EXPLORE", icon: cloud },
      { name: "Kali Linux Emulator", icon: cloud },
      { name: "Digital Certificate Automation", icon: cloud}
+]; 
+const skills = [
+     { name: "React", icon: cloud}
+]; 
+const experience = [
+    { name: "Technical Support Intern", icon: cloud },  
 ];
-
-/* skills */
-
-/* notes */
-
-/* about me */
+const about_me = [
+    
+]
+const folders = {
+     projects: projects,
+     skills: skills, 
+     experience: experience, 
+     about_me: about_me
+};
 
 /* Open window */
 function openWindow(name) {
      const win = document.getElementById(`window-${name}`); 
      if (!win) return; 
+
      win.classList.remove("hidden");
      win.style.zIndex = ++z; 
-//      win.innerHTML = projects.map(p => 
-//           `<div class="file">
-//            <img src="${p.icon}" class="file-icon" />
-//           <span>${p.name}</span>
-//           </div>`)
-//     .join(" ");
+
+     const items = folders[name] || []; 
+     console.log(items)
+     if (name == "about_me") return; 
+     win.innerHTML = 
+          `<div class=titlebar-kali>
+          <span>root@kali:~/${name}</span>
+          <button class="window-close" onclick="closeWindow()">x</button>
+          </div>`
+     win.innerHTML += items.map(p => 
+          `<div class="file">
+           <img src="${p.icon}" class="file-icon" />
+          <span>${p.name}</span>
+          </div>`)
+    .join(" ");
 }
 
 function closeWindow(name) {
@@ -38,3 +55,10 @@ function openProject() {
      
 
 }
+
+document.addEventListener("click", (e) => {
+     const btn = e.target.closest(".window-close"); 
+     if (!btn) return; 
+
+     btn.closest(".window-kali").classList.add("hidden"); 
+});
