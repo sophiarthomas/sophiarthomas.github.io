@@ -36,8 +36,8 @@ function openWindow(name) {
      const items = folders[name] || []; 
      if (name == "about_me") return; 
      if (name == "notes") {
-          const url = "../src/listall.html"; 
-          window.open(url, '_blank');
+          const url = "./listall.html"; 
+          return window.open(url, '_blank');
      }; 
      win.innerHTML = 
           `<div class=titlebar-kali>

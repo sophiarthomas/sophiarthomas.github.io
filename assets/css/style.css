@@ -230,8 +230,9 @@
   }
 }
 @media (min-width: 768px) {
-  /* .desktop {
-  } */
+  .desktop {
+    display: flex; 
+  }
   .folder {
     width: 9rem; 
     height: 9rem; 
