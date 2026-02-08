@@ -24,15 +24,21 @@ const folders = {
 
 /* Open window */
 function openWindow(name) {
+     const left = (Math.random() * window.innerWidth - 150); 
+     const top = (Math.random() * window.innerHeight - 150);
      const win = document.getElementById(`window-${name}`); 
      if (!win) return; 
-
+     // win.style.left = `${left}px`;
+     // win.style.top = `${top}px`;
      win.classList.remove("hidden");
      win.style.zIndex = ++z; 
 
      const items = folders[name] || []; 
-     console.log(items)
      if (name == "about_me") return; 
+     if (name == "notes") {
+          const url = "../src/listall.html"; 
+          window.open(url, '_blank');
+     }; 
      win.innerHTML = 
           `<div class=titlebar-kali>
           <span>root@kali:~/${name}</span>

@@ -7,18 +7,13 @@
     <title>Sophia R. Thomas</title>
     <style>
       body{
-        background:url('../assets/img/logos/kali-layers.png');
-        background-size:cover;
-        background-position: center center; 
-        background-attachment: fixed; 
         color: #d0d0d0; 
         display:flex;
-        align-items:flex-start; 
-        justify-content:flex-start;
-        padding:24px;
-        margin: 0px; 
-        overflow: hidden; /* Hide scrollbars */
         font-family: monospace; 
+        margin: 0; 
+        justify-content: center; 
+        align-items: flex-start; 
+        height: 100vh; 
       }
     </style>
   </head>
@@ -29,15 +24,10 @@
     <script src="../scripts/dragElement.js" defer></script>
     <script src="../scripts/vCard.js"></script>
     <!-- Folder -->
+    <div class="background-cover"></div>
     <div id="desktop" class="desktop">
        <script src="../scripts/folder.js"></script>
-
-       <!-- Directory Tile -->
-      <div class="folder">
-        <a target="_blank" href="./listall.html">Go to Directory</a>
-      </div>  
     </div>
-
     <div id="window-projects" class="window-kali hidden" data-name="projects"></div>
     <div id="window-skills" class="window-kali hidden" data-name="skills"></div>
     <div id="window-experience" class="window-kali hidden" data-name="experience"></div>
@@ -108,7 +98,6 @@
             </a>
           </div>
         </footer>
-      <!-- </div> -->
   
   </body>
 
